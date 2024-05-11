@@ -1,4 +1,4 @@
-# Project Name
+# Lagrange Interpolation
 Brief description of the project.
 
 Table of Contents

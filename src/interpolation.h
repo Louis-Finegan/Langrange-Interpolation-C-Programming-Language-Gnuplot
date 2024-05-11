@@ -1,6 +1,10 @@
 #ifndef LAGRANGE_INTERPOLATION_H
 #define LAGRANGE_INTERPOLATION_H
 
+double lagrange_basis_polynomial(double x_val, double nodes_x[], int index_xj, int nodes_len);
+double lagrange_interpolation(double x_val, double nodes_x[], double nodes_y[], int nodes_len);
+
+
 double lagrange_basis_polynomial(double x_val, double nodes_x[], int index_xj, int nodes_len) {
     double polynomial = 1.0;
 
