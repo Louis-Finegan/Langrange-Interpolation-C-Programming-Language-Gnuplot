@@ -1,41 +1,53 @@
 # Lagrange Interpolation
-Brief description of the project.
 
-Table of Contents
-Description
-Installation
-Usage
-Files
-Dependencies
-Contributing
-License
-Description <a name="description"></a>
-Provide an overview of the project, its purpose, and what it does. Also, mention any important details about the project.
+Written in Ubuntu 23.04 LTS. This progam was written for GNU/Linux systems.
 
-Installation <a name="installation"></a>
-Explain how to install or set up the project. Include any dependencies that need to be installed and how to install them.
+## Visualize lagrange polynomials with GNU plot
 
-Usage <a name="usage"></a>
-Provide instructions on how to use the project. Include examples or usage scenarios if applicable.
+The data points are parsed from a csv file from `data/` directory. From this data 
 
-Files <a name="files"></a>
-List and briefly describe the files included in the project. Include their purpose and any important details about them.
+Lagrange interpolation is a mathematical method that finds new points $(x,y)$ in between known discrete points $(x_k, y_k)$ for $k \in \mathbb{Z}$. These new points are calculated using a polynomial $P_n(x)$ called the *Lagrange Polynomial*. The maximum value for $k$ is $n$, which is the degree of $P_n(x)$. 
 
-main.c - Contains the main C program.
-interpolation.h - Header file for interpolation functions.
-ReadCSV.h - Header file for CSV reading function.
-split.h - Header file for string splitting function.
-gnuplot_.h - Header file for GNU plot function.
-lagrange_interpolation.h - Header file for Lagrange interpolation functions.
-script.sh - Bash script for compiling and executing the program.
-Dependencies <a name="dependencies"></a>
-List any dependencies required by the project, including libraries, tools, or software versions.
+The *Lagrange Polynomial* is written in the following form:
 
-GCC (GNU Compiler Collection)
-GNU Plot
-Math library
-Contributing <a name="contributing"></a>
-Explain how others can contribute to the project. Include guidelines for submitting bug reports, feature requests, or code contributions.
+$$P_n(x) = y_0L_0(x) + y_1L_1(x) + \dots + y_nL_n(x)$$
 
-License <a name="license"></a>
-Specify the project's license, along with any terms or conditions. If applicable, provide a link to the full license text.
+Where $L_k(x)$ is called the *Lagrange Basis*, and is written as such
+
+$$L_i(x) = \frac{x - x_0}{x_i - x_0} \dots \frac{x - x_{i-1}}{x_i - x_{i-1}}\frac{x - x_{i+1}}{x_i - x_{i+1}} \dots \frac{x - x_n}{x_i - x_n} $$
+
+For $n$ known points, or node, valuev pairs, then the lagrange basis would be composed of $n$ basis vectors (Lagrange Basis).
+
+
+
+This repository hosts a C program specifically engineered for Lagrange interpolation. It efficiently processes data points extracted from a CSV file, employing robust algorithms to compute the interpolating polynomial. Subsequently, it utilizes the GNU Plot library to visualize the interpolated results comprehensively.
+
+
+Perform lagrange interpolation on data point stored in csv files. Project is written in the c programming language.
+
+[ADD IMAGE HERE]
+
+**Ensure GNU plot is installed on your machine.** otherwise run
+
+```
+sudo apt-get update \
+sudo apt-get install gnuplot
+```
+
+## Formulation
+
+
+## How to use
+
+Clone the repository
+
+```
+git clone Louis-Finegan/Lagrange-Interpolation-C- \
+make
+```
+
+To run the executible 
+
+## License
+
+MIT License - see LICENSE for details.
