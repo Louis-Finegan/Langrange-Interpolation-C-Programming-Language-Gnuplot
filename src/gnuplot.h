@@ -1,5 +1,5 @@
-#ifndef GNUPLOT__H
-#define GBUPLOT__H
+#ifndef GNUPLOT_H
+#define GBUPLOT_H
 
 void plot(double *X, double *nodes, double *values, int nodes_len, int nsteps, const char *filename);
 

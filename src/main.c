@@ -4,7 +4,7 @@
 #include <math.h>
 
 #include "interpolation.h"
-#include "gnuplot_.h"
+#include "gnuplot.h"
 
 char *split(char *filename);
 
